@@ -30,16 +30,21 @@ public class SnakeTheGame {
         snakeCoord[2][0] = 0;                              // Tail.
         snakeCoord[2][1] = 0;
 
-        do {
-            appleP = random.nextInt(5);
-            appleQ = random.nextInt(10);
-        } while (checkBodyPenetrated());
-        showField();
-        while (isRules) {                                  // Gaming process.
-            goSnake((char) System.in.read());
+        try {
+            do {
+                appleP = random.nextInt(5);
+                appleQ = random.nextInt(10);
+            } while (checkBodyPenetrated());               // Check apple spawn(to avoid spawn at snake body).
             showField();
+            while (isRules) {                                  // Gaming process.
+                goSnake((char) System.in.read());
+                System.in.read();
+                showField();
+            }
+            sayGameOver();
+        } catch (ArrayIndexOutOfBoundsException e) {
+            sayGameOver();
         }
-        sayGameOver();
     }
 
     private static void showField() throws InterruptedException {              // Graphic's writing and some logic.
