@@ -1,4 +1,4 @@
-package FreePractice.Human;
+package Human;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -6,7 +6,7 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import FreePractice.Different.Encryption;
+import OneFilePrograms.Encryption;
 
 public class Human implements Serializable {
 

@@ -1,4 +1,4 @@
-package FreePractice.Tetris;
+package Tetris;
 
 import java.io.IOException;
 import java.util.Arrays;

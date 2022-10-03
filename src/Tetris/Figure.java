@@ -1,4 +1,4 @@
-package FreePractice.Tetris;
+package Tetris;
 
 public class Figure {
 
