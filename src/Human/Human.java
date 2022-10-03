@@ -84,6 +84,7 @@ FIX
                         for (Path path : Files.newDirectoryStream(Path.of(DIR_PATH))) {
                             System.out.println(path.getFileName());
                         }
+                        break;
                     }
                     case "save": {
                         System.out.print("\nВведите имя файла(с расширением или без): ");
